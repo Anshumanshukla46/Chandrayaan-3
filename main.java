@@ -64,4 +64,27 @@ class Spacecraft {
                 break;
         }
     }
+
+    public void turn(char command) {
+        switch (direction) {
+            case 'N':
+                direction = (command == 'l') ? 'W' : 'E';
+                break;
+            case 'S':
+                direction = (command == 'l') ? 'E' : 'W';
+                break;
+            case 'E':
+                direction = (command == 'l') ? 'N' : 'S';
+                break;
+            case 'W':
+                direction = (command == 'l') ? 'S' : 'N';
+                break;
+            case 'U':
+                direction = (command == 'l') ? 'N' : 'S';
+                break;
+            case 'D':
+                direction = (command == 'l') ? 'S' : 'N';
+                break;
+        }
+    }
 }
