@@ -87,4 +87,22 @@ class Spacecraft {
                 break;
         }
     }
+
+    public void tilt(char command) {
+        if (command == 'u') {
+            if (direction == 'N' || direction == 'S')
+                direction = 'U';
+            else if (direction == 'U')
+                direction = 'S';
+            else if (direction == 'D')
+                direction = 'N';
+        } else if (command == 'd') {
+            if (direction == 'N' || direction == 'S')
+                direction = 'D';
+            else if (direction == 'U')
+                direction = 'N';
+            else if (direction == 'D')
+                direction = 'S';
+        }
+    }
 }
