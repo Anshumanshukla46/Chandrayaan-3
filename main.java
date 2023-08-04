@@ -1,23 +1,7 @@
-import java.util.Scanner;
-
 public class main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter the starting x, y, z coordinates separated by spaces:");
-        int x = scanner.nextInt();
-        int y = scanner.nextInt();
-        int z = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
-
-        System.out.println("Enter the initial direction (N, S, E, W, U, D):");
-        char direction = scanner.nextLine().charAt(0);
-
-        Spacecraft chandrayaan3 = new Spacecraft(x, y, z, direction);
-
-        System.out.println("Enter the commands (f, b, l, r, u, d) separated by spaces:");
-        String commandLine = scanner.nextLine();
-        char[] commands = commandLine.toCharArray();
+        Spacecraft chandrayaan3 = new Spacecraft(0, 0, 0, 'N');
+        char[] commands = { 'f', 'r', 'u', 'b', 'l' };
 
         System.out.println("Starting Position: " + chandrayaan3.toString());
 
@@ -33,8 +17,6 @@ public class main {
         }
 
         System.out.println("Final Position: " + chandrayaan3.toString());
-
-        scanner.close();
     }
 }
 
